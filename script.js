@@ -1,52 +1,52 @@
 /**
  * ============================================================================
- * LUXURY WEDDING CONFIGURATION OBJECT (سعد & ميادة)
- * جميع بيانات الحفل محددة هنا ومربوطة تلقائياً بالواجهة
+ * LUXURY WEDDING CONFIGURATION (Saad & Mayada)
+ * Edit the values below — everything on the page updates automatically.
  * ============================================================================
  */
 const WEDDING_CONFIG = {
-  // أسماء العروسين
-  groomName: "سعد",
-  brideName: "ميادة",
+  // Couple's names
+  groomName: "Saad",
+  brideName: "Mayada",
 
-  // تاريخ وتوقيت الحفل
-  weddingDate: "2026-10-09T19:30:00", // 09 أكتوبر 2026 الساعة 7:30 مساءً
-  weddingTime: "السابعة والنصف مساءً",
+  // Date & time (ISO format — used by the live countdown)
+  weddingDate: "2026-10-09T19:30:00", // October 9, 2026, 7:30 PM
+  weddingTime: "7:30 PM",
 
-  // تفاصيل المكان والزي
-  venueName: "قاعة رويال الفاخرة",
-  venueAddress: "الموقع المحدد للحفل",
-  dressCode: "ملابس رسمية أنيقة (Formal Chic)",
-  googleMapsUrl: "https://maps.google.com/?q=24.7136,46.6753", // رابط خرائط جوجل للقاعة
+  // Venue & dress code
+  venueName: "Kempinski Hall",
+  venueAddress: "Grand Ballroom, Main Entrance",
+  dressCode: "Formal Chic",
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Kempinski+Hall", // replace with your venue's exact map link
 
-  // رسالة ورقم تأكيد الحضور (واتساب بدون أصفار دولية أو علامة +)
+  // RSVP via WhatsApp — replace with the real number (country code, no + or leading zero)
   whatsappNumber: "201000000000",
-  whatsappMessage: "السلام عليكم، حابب أؤكد حضوري لحفل زفاف سعد وميادة بتاريخ 09/10/2026 ❤️",
+  whatsappMessage: "Hello! I would be delighted to confirm my attendance at Saad & Mayada's wedding on October 9, 2026. ❤️",
 
-  // رابط ملف الصوت والموسيقى المحيطية
-  musicUrl: "assets/music/romantic-ambient.mp3",
+  // Optional ambient music (leave blank to disable the music button)
+  musicUrl: "",
 
-  // صور عامة فاخرة بديلة لصور الأشخاص (خواتم، زهور ملكية، ديكور راقٍ)
+  // Symbolic photos for the couple cards (rings / bouquet, not portraits)
   groomPhoto: "assets/images/wedding-ring-hero.jpg",
   bridePhoto: "assets/images/bridal-bouquet.jpg",
 
-  // روابط احتياطية موثوقة تعمل فوراً بدون انتظار تحميل ملفات محلية
+  // Reliable fallback photos, used automatically if the files above aren't found
   defaultGroomFallback: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
   defaultBrideFallback: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80",
   defaultGalleryFallbacks: [
-    "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80", // خواتم مذهبة
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80", // طاولة استقبال
-    "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80", // كعكة الزفاف
-    "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80", // قوس الورد
-    "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80", // إضاءة المسرح والقاعة
-    "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80", // زهور بيضاء فاخرة
-    "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80", // كريستال وديكور
-    "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80"  // بطاقات مذهبة
+    "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80", // golden rings
+    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80", // reception table
+    "https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80", // wedding cake
+    "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80", // floral arch
+    "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80", // venue lighting
+    "https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80", // white florals
+    "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80", // crystal decor
+    "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80"  // gilded place cards
   ]
 };
 
 /* ============================================================================
-   EXECUTION ENTRY POINT
+   ENTRY POINT
    ============================================================================ */
 document.addEventListener("DOMContentLoaded", () => {
   setupConfigBindings(WEDDING_CONFIG);
@@ -60,64 +60,54 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * تحديث نصوص وروابط الصفحة من الكائن
+ * Bind config values and links into the page.
  */
 function setupConfigBindings(config) {
-  // ربط الأسماء في كامل أنحاء الموقع
-  document.querySelectorAll(".config-groom-name").forEach(el => el.textContent = config.groomName);
-  document.querySelectorAll(".config-bride-name").forEach(el => el.textContent = config.brideName);
+  document.querySelectorAll(".config-groom-name").forEach(el => (el.textContent = config.groomName));
+  document.querySelectorAll(".config-bride-name").forEach(el => (el.textContent = config.brideName));
+  document.querySelectorAll(".config-time").forEach(el => (el.textContent = config.weddingTime));
+  document.querySelectorAll(".config-venue-name").forEach(el => (el.textContent = config.venueName));
+  document.querySelectorAll(".config-venue-address").forEach(el => (el.textContent = config.venueAddress));
+  document.querySelectorAll(".config-dress-code").forEach(el => (el.textContent = config.dressCode));
 
-  // ربط تفاصيل الحفل
-  document.querySelectorAll(".config-time").forEach(el => el.textContent = config.weddingTime);
-  document.querySelectorAll(".config-venue-name").forEach(el => el.textContent = config.venueName);
-  document.querySelectorAll(".config-venue-address").forEach(el => el.textContent = config.venueAddress);
-  document.querySelectorAll(".config-dress-code").forEach(el => el.textContent = config.dressCode);
-
-  // تحديث الصور الرمزية للعروسين مع الـ Fallbacks
   const groomImg = document.getElementById("groom-img");
   if (groomImg) {
     groomImg.src = config.groomPhoto;
-    groomImg.onerror = () => { groomImg.src = config.defaultGroomFallback; };
+    groomImg.onerror = () => { groomImg.onerror = null; groomImg.src = config.defaultGroomFallback; };
   }
 
   const brideImg = document.getElementById("bride-img");
   if (brideImg) {
     brideImg.src = config.bridePhoto;
-    brideImg.onerror = () => { brideImg.src = config.defaultBrideFallback; };
+    brideImg.onerror = () => { brideImg.onerror = null; brideImg.src = config.defaultBrideFallback; };
   }
 
-  // تحديث صور المعرض العام
-  const galleryImgs = document.querySelectorAll(".gallery-item img");
-  galleryImgs.forEach((img, i) => {
-    img.onerror = () => {
-      if (config.defaultGalleryFallbacks[i]) {
-        img.src = config.defaultGalleryFallbacks[i];
-      }
-    };
+  document.querySelectorAll(".gallery-item img").forEach((img, i) => {
+    if (config.defaultGalleryFallbacks[i]) {
+      img.src = config.defaultGalleryFallbacks[i];
+    }
   });
 
-  // خرائط جوجل
   const mapsBtn = document.getElementById("maps-btn");
-  if (mapsBtn && config.googleMapsUrl) {
-    mapsBtn.href = config.googleMapsUrl;
-  }
+  if (mapsBtn && config.googleMapsUrl) mapsBtn.href = config.googleMapsUrl;
 
-  // واتساب تأكيد الحضور
   const rsvpBtn = document.getElementById("whatsapp-rsvp-btn");
   if (rsvpBtn) {
     const encoded = encodeURIComponent(config.whatsappMessage);
     rsvpBtn.href = `https://wa.me/${config.whatsappNumber}?text=${encoded}`;
   }
 
-  // ملف الصوت
   const bgAudio = document.getElementById("bg-audio");
+  const musicToggle = document.getElementById("music-toggle");
   if (bgAudio && config.musicUrl) {
     bgAudio.src = config.musicUrl;
+  } else if (musicToggle) {
+    musicToggle.style.display = "none"; // hide the control when no track is set
   }
 }
 
 /**
- * تأثير ذرات الذهب المتطايرة على الكانفاس
+ * Drifting gold particles on the background canvas.
  */
 function initCanvasParticles() {
   const canvas = document.getElementById("particles-canvas");
@@ -136,9 +126,7 @@ function initCanvasParticles() {
   const particles = [];
 
   class Sparkle {
-    constructor() {
-      this.init();
-    }
+    constructor() { this.init(); }
     init() {
       this.x = Math.random() * w;
       this.y = Math.random() * h;
@@ -168,23 +156,18 @@ function initCanvasParticles() {
     }
   }
 
-  for (let i = 0; i < count; i++) {
-    particles.push(new Sparkle());
-  }
+  for (let i = 0; i < count; i++) particles.push(new Sparkle());
 
   function render() {
     ctx.clearRect(0, 0, w, h);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
+    particles.forEach(p => { p.update(); p.draw(); });
     requestAnimationFrame(render);
   }
   render();
 }
 
 /**
- * انتقال الستار الافتتاحي وبدء الموسيقى
+ * Opening curtain transition + optional music start.
  */
 function initOpeningTransition() {
   const enterBtn = document.getElementById("enter-btn");
@@ -200,19 +183,15 @@ function initOpeningTransition() {
     if (bgAudio && bgAudio.src) {
       bgAudio.play().then(() => {
         if (musicToggle) musicToggle.classList.add("playing");
-      }).catch(() => {
-        // Autoplay restrictions fallback
-      });
+      }).catch(() => { /* autoplay may be blocked — the music button still works */ });
     }
 
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 300);
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 300);
   });
 }
 
 /**
- * زر التحكم بالموسيقى
+ * Music on/off toggle.
  */
 function initAudioSystem() {
   const toggle = document.getElementById("music-toggle");
@@ -221,11 +200,8 @@ function initAudioSystem() {
 
   toggle.addEventListener("click", () => {
     if (!audio.src) return;
-
     if (audio.paused) {
-      audio.play().then(() => {
-        toggle.classList.add("playing");
-      }).catch(() => {});
+      audio.play().then(() => toggle.classList.add("playing")).catch(() => {});
     } else {
       audio.pause();
       toggle.classList.remove("playing");
@@ -234,7 +210,7 @@ function initAudioSystem() {
 }
 
 /**
- * عداد تنازلي دقيق ولحظي
+ * Live countdown to the wedding date.
  */
 function initRealtimeCountdown(targetDateString) {
   const daysEl = document.getElementById("days");
@@ -247,8 +223,7 @@ function initRealtimeCountdown(targetDateString) {
   const target = new Date(targetDateString).getTime();
 
   function update() {
-    const now = new Date().getTime();
-    const diff = target - now;
+    const diff = target - Date.now();
 
     if (diff <= 0) {
       if (clockBox) clockBox.classList.add("hidden");
@@ -257,10 +232,10 @@ function initRealtimeCountdown(targetDateString) {
       return;
     }
 
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
 
     if (daysEl) daysEl.textContent = String(d).padStart(2, "0");
     if (hoursEl) hoursEl.textContent = String(h).padStart(2, "0");
@@ -273,11 +248,14 @@ function initRealtimeCountdown(targetDateString) {
 }
 
 /**
- * حركات الظهور مع التمرير
+ * Fade-in-on-scroll for elements marked .reveal-element.
  */
 function initIntersectionObserver() {
   const elements = document.querySelectorAll(".reveal-element");
-
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach(el => el.classList.add("is-revealed"));
+    return;
+  }
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -285,16 +263,13 @@ function initIntersectionObserver() {
         obs.unobserve(entry.target);
       }
     });
-  }, {
-    threshold: 0.12,
-    rootMargin: "0px 0px -40px 0px"
-  });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
   elements.forEach(el => observer.observe(el));
 }
 
 /**
- * القائمة الجانبية المنسدلة
+ * Slide-in navigation drawer.
  */
 function initDrawerNavigation() {
   const navToggle = document.getElementById("nav-toggle");
@@ -308,7 +283,6 @@ function initDrawerNavigation() {
     siteNav.classList.add("is-open");
     navToggle.setAttribute("aria-expanded", "true");
   }
-
   function close() {
     siteNav.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
@@ -320,7 +294,7 @@ function initDrawerNavigation() {
 }
 
 /**
- * معرض الصور التكبيري Lightbox
+ * Gallery lightbox viewer — click to open, arrow keys, buttons, and swipe to navigate.
  */
 function initLightboxViewer() {
   const lightbox = document.getElementById("lightbox");
@@ -362,31 +336,24 @@ function initLightboxViewer() {
     document.body.style.overflow = "";
   }
 
-  galleryItems.forEach((item, index) => {
-    item.addEventListener("click", () => open(index));
-  });
+  galleryItems.forEach((item, index) => item.addEventListener("click", () => open(index)));
 
   if (closeBtn) closeBtn.addEventListener("click", close);
   if (prevBtn) prevBtn.addEventListener("click", () => show(currentIndex - 1));
   if (nextBtn) nextBtn.addEventListener("click", () => show(currentIndex + 1));
 
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) close();
-  });
+  lightbox.addEventListener("click", e => { if (e.target === lightbox) close(); });
 
-  window.addEventListener("keydown", (e) => {
+  window.addEventListener("keydown", e => {
     if (!lightbox.classList.contains("active")) return;
     if (e.key === "Escape") close();
-    if (e.key === "ArrowLeft") show(currentIndex + 1);
-    if (e.key === "ArrowRight") show(currentIndex - 1);
+    if (e.key === "ArrowLeft") show(currentIndex - 1);
+    if (e.key === "ArrowRight") show(currentIndex + 1);
   });
 
   let startX = 0;
-  lightbox.addEventListener("touchstart", (e) => {
-    startX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
-  lightbox.addEventListener("touchend", (e) => {
+  lightbox.addEventListener("touchstart", e => { startX = e.changedTouches[0].screenX; }, { passive: true });
+  lightbox.addEventListener("touchend", e => {
     const diff = e.changedTouches[0].screenX - startX;
     if (Math.abs(diff) > 40) {
       if (diff > 0) show(currentIndex - 1);
